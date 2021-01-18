@@ -66,6 +66,7 @@ ul a:hover {
     background-color: #E8D44D;
     padding: 10px 70px;
     border-radius: 30px;
+    position: relative;
 }
 
 aside img {
@@ -73,8 +74,8 @@ aside img {
     position: absolute;
     height: 30px;
     width: 30px;
-    top: 175px;
-    left: 50px;
+    top: 15px;
+    left: 15px;
 }
 
 h2 {
