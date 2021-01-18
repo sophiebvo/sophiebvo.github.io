@@ -23,9 +23,9 @@ h1 {
     font-size: 40px;
     font-family: 'Kalam', cursive;
     padding: 0;
-    margin: 0;
-    text-align: center;
+    margin: 0 22% 12px 22%;
     color: #7ce5ff;
+    display: inline-block;
 }
 
 .jsFont {
@@ -35,7 +35,7 @@ h1 {
     color: #E8D44D;
 }
 
-nav ul {
+nav > ul {
     list-style-type: none;
     padding: 0;
     margin: 0 3%;
@@ -46,15 +46,12 @@ nav li {
     float: left;
     margin: 10px 7px 20px 7px;
     padding: 0 10px;
-    color: #ffffff;
 }
 
 nav a {
     text-decoration: none;
     padding: 5px 7px 5px 7px;
-}
-
-nav li a {
+    color: #ffffff;
     text-transform: uppercase;
 }
 
@@ -64,14 +61,6 @@ nav li a {
     padding: 10px 70px;
     border-radius: 30px;
 }
-/*
-ul a:visited:not(.activePage){
-    color:#ffffff;
-}
-*/
-ul a:visited {
-    color: #ffffff;
-}
 
 ul a:hover { 
     color: #7ce5ff;
@@ -80,7 +69,7 @@ ul a:hover {
 
 .activePage {
     font-style: bold;
-    color: pink;
+    color: #7ce5ff;
 }
 
 h2 {
