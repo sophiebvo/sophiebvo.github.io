@@ -31,7 +31,7 @@ h1 {
     color: #E8D44D;
 }
 
-nav > ul {
+nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0 3%;
@@ -57,13 +57,13 @@ ul a:hover {
 }
 
 .activePage {
-    font-style: bold;
     color: #7ce5ff;
 }
 
 .wrapper {
     clear: both;
     background-color: #E8D44D;
+    margin: 0;
     padding: 10px 70px;
     border-radius: 30px;
     position: relative;
@@ -83,6 +83,10 @@ h2 {
     font-size: 30px;
     font-family: 'Kalam', cursive;
     padding: 0;
+}
+
+.widerSpacing {
+    letter-spacing: 8px;
 }
 
 p {
