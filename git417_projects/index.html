@@ -5,7 +5,7 @@
         <!--
             GIT417: Home Page
             Author: Sophie Ojcius
-            Date: Jan 18 2021
+            Date: Jan 25 2021
         -->
         
         <title>Sophie's JS Projects</title>
@@ -36,13 +36,179 @@
             <main>
                 <h2>Welcome to my class portfolio!</h2>
 
-                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. You can either view the newest project below, or click on any project that interests you above&#8212;assuming that they've already been created. Next week's project will cover JavaScript calculations.</p>
+                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. You can either view the newest project below, or click on any project that interests you above&#8212;assuming that they've already been created. Next week's project will cover JavaScript if/else statements.</p>
+
+                <h2>Project 1: Calculations</h2>
+
+                <p>For this week's project, I've created a simple budget planner. By inputting your monthly income and allocating how much money you wish (or need) to spend in each category, the planner then calculates how much money is left over so that you can change your budget costs as necessary.</p>
+
+                <p>The goal of this project is to get users to start being more conscious about how they should spend their monthly income in a relaxed and interactive setting that lets them adjust how much money they want to spend in each category until they're happy with the results. It's also a great way for users to test how much money they could spend for living and miscellaneous expenses by inputting a hypothetical income that they hope to one day earn.</p>
+
+                <section id="budgetPlanner">
+                    <h3>Monthly Budget Planner</h3>
+
+                    <div class="lineDivide"></div>
+
+                    <form>
+                        <!--User input value below (minimum value of 0) will be grabbed by document.getElementById()-->
+                        <label for="income">
+                            Your Monthly Income 
+                            <span class="smallList">(after taxes...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="income" value="0">
+
+                        <div class="lineDivide"></div>
+
+                        <label for="housingBudget">
+                            Housing 
+                            <span class="smallList">(mortgage, rent, taxes, repairs...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="housingBudget" value="0">
+
+                        <label for="utilitiesBudget">
+                            Utilities 
+                            <span class="smallList">(electricity, water, gas, internet, phone...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="utilitiesBudget" value="0">
+
+                        <label for="transportationBudget">
+                            Transportation 
+                            <span class="smallList">(car payments, parking fees, public transportation...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="transportationBudget" value="0">
+
+                        <label for="educationBudget">
+                            Education 
+                            <span class="smallList">(books, supplies...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="educationBudget" value="0">
+
+                        <label for="insuranceBudget">
+                            Insurance 
+                            <span class="smallList">(medical, auto, homeowner's...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="insuranceBudget" value="0">
+
+                        <label for="healthcareBudget">
+                            Healthcare 
+                            <span class="smallList">(primary copays, dental copays, medications...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="healthcareBudget" value="0">
+
+                        <label for="foodBudget">
+                            Food 
+                            <span class="smallList">(groceries, takeout, pet food...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="foodBudget" value="0">
+
+                        <label for="clothingBudget">
+                            Clothing
+                            <span class="smallList">(shirts, shoes, accessories, children's clothing...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="clothingBudget" value="0">
+
+                        <label for="groomingBudget">
+                            Personal Hygiene &#38; Grooming 
+                            <span class="smallList">(haircuts, showering products...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="groomingBudget" value="0">
+
+                        <label for="householdBudget">
+                            Household Necessities 
+                            <span class="smallList">(toilet paper, tools, cleaning supplies...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="householdBudget" value="0">
+
+                        <label for="subscriptionsBudget">
+                            Subscriptions & Memberships 
+                            <span class="smallList">(Netflix, Amazon Prime, gym...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="subscriptionsBudget" value="0">
+
+                        <label for="travelBudget">
+                            Travel & Outings 
+                            <span class="smallList">(vacations, restaurants, bars, movie tickets...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="travelBudget" value="0">
+
+                        <label for="otherEntBudget">
+                            Other Entertainment 
+                            <span class="smallList">(videogames, hobbies...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="otherEntBudget" value="0">
+
+                        <label for="giftsBudget">
+                            Gifts & Donations 
+                            <span class="smallList">(birthdays, holidays, special occaions, charities...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="giftsBudget" value="0">
+
+                        <label for="debtBudget">
+                            Debt 
+                            <span class="smallList">(loan payments, credit card payments...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="debtBudget" value="0">
+
+                        <label for="savingsBudget">
+                            Savings 
+                            <span class="smallList">(emergency fund, big purchases, retirement...)</span>
+                            <span class="inputDollar">$</span>
+                        </label>
+                        <!--User input value below will be grabbed by document.getElementById()-->
+                        <input type="number" min="0" id="savingsBudget" value="0">
+
+                        <div class="lineDivide"></div>
+
+                        <!--clicking on this button triggers calcLeftoverMoney() function-->
+                        <button type="button" id="remainingMoney">Calculate Remaining Money</button>
+
+                        <!--clicking on this button triggers clearBudgetCategories() function-->
+                        <button type="button" id="resetBudgets">Clear Budgets</button>
+                    </form>
+
+                    <!--new text will be written here using document.getElementById().innerHTML after clicking on a button-->
+                    <p id="leftoverMoneyText"></p>
+                </section>
             </main>
 
             <footer>
                 &copy; Sophie Ojcius
             </footer>
         </div>
+
+        <script src="javascript/calculations.js"></script>
     </body>
 
 </html>
