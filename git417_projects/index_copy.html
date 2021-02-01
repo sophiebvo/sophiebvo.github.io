@@ -3,44 +3,44 @@
 
     <head>
         <!--
-            GIT417: Calculations
+            GIT417: Home Page
             Author: Sophie Ojcius
-            Date: Jan 25 2021
+            Date: Feb 2 2021
         -->
         
-        <title>Sophie's JS Projects | Calculations</title>
-        <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+        <title>Sophie's JS Projects</title>
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <script src="../javascript/modernizr.custom.05819.js"></script>
+        <script src="javascript/modernizr.custom.05819.js"></script>
     </head>
 
     <body>
         <header>
             <nav>
-                <a href="../index.html"><h1>Sophie's <span class="jsFont">JavaScript</span> Projects</h1></a>
+                <a href="index.html"><h1>Sophie's <span class="jsFont">JavaScript</span> Projects</h1></a>
                 <ul>
-                    <li><a href="calculations.html"  class="activePage">Calculations</a></li>
-                    <li><a href="if_else_statements.html">If/Else Statements</a></li>
-                    <li><a href="exception_handling.html">Exception Handling</a></li>
-                    <li><a href="web_security.html">Web Security</a></li>
-                    <li><a href="validation_code.html">Validation Code</a></li>
-                    <li><a href="js_tutorial.html">JS Tutorial</a></li>
+                    <li><a href="projects/calculations.html">Calculations</a></li>
+                    <li><a href="projects/if_else_statements.html">If/Else Statements</a></li>
+                    <li><a href="projects/exception_handling.html">Exception Handling</a></li>
+                    <li><a href="projects/web_security.html">Web Security</a></li>
+                    <li><a href="projects/validation_code.html">Validation Code</a></li>
+                    <li><a href="projects/js_tutorial.html">JS Tutorial</a></li>
                 </ul>
             </nav>
         </header>
-        
+
         <div class="wrapper">
-            <aside>
-                <a href="../index.html"><img src="../images/backbutton.png" alt="back button to home"/></a>
-            </aside>
-
             <main>
-                <h2>Project 1: Calculations</h2>
+                <h2>Welcome to my class portfolio!</h2>
 
-                <p>For this week's project, I've created a simple budget planner. By inputting your monthly income and allocating how much money you wish (or need) to spend in each category, the planner then calculates how much money is left over so that you can change your budget costs as necessary.</p>
+                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. You can either view the newest project below, or click on any project that interests you above&#8212;assuming that they've already been created. Next week's project will cover exception handling.</p>
+
+                <h2>Project 2: I<span class="widerSpacing">f/</span>Else Statements</h2>
+
+                <p>For this week's project, I've updated my simple budget planner from the previous week to provide better responses. By inputting your monthly income and allocating how much money you wish (or need) to spend in each category, the planner then calculates how much money is left over so that you can change your budget costs as necessary. It now also provides suggestions to the user based on how much money is left over, and the money left over changes color depending on how little or how much money there is.</p>
 
                 <p>The goal of this project is to get users to start being more conscious about how they should spend their monthly income in a relaxed and interactive setting that lets them adjust how much money they want to spend in each category until they're happy with the results. It's also a great way for users to test how much money they could spend for living and miscellaneous expenses by inputting a hypothetical income that they hope to one day earn.</p>
 
@@ -200,6 +200,7 @@
 
                     <!--new text will be written here using document.getElementById().innerHTML after clicking on a button-->
                     <span id="leftoverMoneyText" class="leftoverMoneyTextClass"></span>
+                    <span id="moneyComment" class="moneyCommentClass"></span> <!--THIS MAY NEED TO BE REMOVED????-->
                 </section>
             </main>
 
@@ -208,7 +209,7 @@
             </footer>
         </div>
 
-        <script src="../javascript/calculations.js"></script>
+        <script src="javascript/ifelsestatements.js"></script>
     </body>
 
 </html>

@@ -5,7 +5,7 @@
         <!--
             GIT417: Home Page
             Author: Sophie Ojcius
-            Date: Jan 25 2021
+            Date: Feb 2 2021
         -->
         
         <title>Sophie's JS Projects</title>
@@ -36,13 +36,13 @@
             <main>
                 <h2>Welcome to my class portfolio!</h2>
 
-                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. You can either view the newest project below, or click on any project that interests you above&#8212;assuming that they've already been created. Next week's project will cover JavaScript if/else statements.</p>
+                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. You can either view the newest project below, or click on any project that interests you above&#8212;assuming that they've already been created. Next week's project will cover exception handling.</p>
 
-                <h2>Project 1: Calculations</h2>
+                <h2>Project 2: I<span class="widerSpacing">f/</span>Else Statements</h2>
 
-                <p>For this week's project, I've created a simple budget planner. By inputting your monthly income and allocating how much money you wish (or need) to spend in each category, the planner then calculates how much money is left over so that you can change your budget costs as necessary.</p>
+                <p>For this week's project, I've updated my simple budget planner from the previous week to provide more intuitive responses after a user calculates their remaining money. Just as before, users input their monthly income and allocate how much money they wish (or need) to spend in each category, and the planner then calculates how much money is left over so that they can change their budget costs as necessary. The planner now also provides suggestions to the user based on how much money is left over, and the amount of money left over changes color depending on how little or how much money is left.</p>
 
-                <p>The goal of this project is to get users to start being more conscious about how they should spend their monthly income in a relaxed and interactive setting that lets them adjust how much money they want to spend in each category until they're happy with the results. It's also a great way for users to test how much money they could spend for living and miscellaneous expenses by inputting a hypothetical income that they hope to one day earn.</p>
+                <p>If you would like to compare the response changes side by side, last week's project is available in the Calculations page.</p>
 
                 <section id="budgetPlanner">
                     <h3>Monthly Budget Planner</h3>
@@ -198,8 +198,10 @@
                         <button type="button" id="resetBudgets">Clear Budgets</button>
                     </form>
 
-                    <!--new text will be written here using document.getElementById().innerHTML after clicking on a button-->
-                    <p id="leftoverMoneyText"></p>
+                    <!--remaining money will be written here using document.getElementById().innerHTML after clicking on a button-->
+                    <span id="leftoverMoneyText" class="leftoverMoneyTextClass"></span>
+                    <!--a comment will be written here using document.getElementById().innerHTML after clicking on the remainingMoney button, decided by the insertMoneyComment() function-->
+                    <span id="moneyComment" class="moneyCommentClass"></span>
                 </section>
             </main>
 
@@ -208,7 +210,7 @@
             </footer>
         </div>
 
-        <script src="javascript/calculations.js"></script>
+        <script src="javascript/ifelsestatements.js"></script>
     </body>
 
 </html>

@@ -10,7 +10,7 @@ var remainingMoney = 0;
 
 // writes string that says remaining money hasn't been calculated yet
 
-document.getElementById("leftoverMoneyText").innerHTML = "Your remaining money has not yet been calculated. Click on the \"Calculate Remaining Money\" button to start.";
+document.getElementById("leftoverMoneyText").innerHTML = "<p class='leftoverMoneyTextClass'>Your remaining money has not yet been calculated. Click on the \"Calculate Remaining Money\" button to start.</p>";
 
 // calculates remaining money by subtracting all the inputted values in the budget categories from the inputted income
 
@@ -33,11 +33,11 @@ function calcLeftoverMoney() {
     var budcat15 = document.getElementById("debtBudget");
     var budcat16 = document.getElementById("savingsBudget");
 
-    remainingMoney = income.value - budcat1.value - budcat2.value - budcat3.value - budcat4.value - budcat5.value - budcat6.value - budcat7.value - budcat8.value - budcat9.value - budcat10.value - budcat11.value - budcat12.value - budcat13.value - budcat14.value - budcat15.value - budcat16.value;
+    remainingMoney = parseFloat(income.value) - parseFloat(budcat1.value) - parseFloat(budcat2.value) - parseFloat(budcat3.value) - parseFloat(budcat4.value) - parseFloat(budcat5.value) - parseFloat(budcat6.value) - parseFloat(budcat7.value) - parseFloat(budcat8.value) - parseFloat(budcat9.value) - parseFloat(budcat10.value) - parseFloat(budcat11.value) - parseFloat(budcat12.value) - parseFloat(budcat13.value) - parseFloat(budcat14.value) - parseFloat(budcat15.value) - parseFloat(budcat16.value);
 
     // Writes text that says how much money is remaining (calculated from calcLeftoverMoney() function)
 
-    document.getElementById("leftoverMoneyText").innerHTML = "Your remaining money is " + remainingMoney + " dollars.";
+    document.getElementById("leftoverMoneyText").innerHTML = "<p class='leftoverMoneyTextClass'>Your remaining money is " + remainingMoney.toFixed(2) + " dollars.</p>";
 }
 
 
@@ -67,7 +67,7 @@ function clearBudgetCategories() {
 
     // Writes past tense text that says how much money remained (money calculated from calcLeftoverMoney() function)
 
-    document.getElementById("leftoverMoneyText").innerHTML = "Your remaining money was previously " + remainingMoney + " dollars before you reset the budget categories back to 0.";
+    document.getElementById("leftoverMoneyText").innerHTML = "<p class='leftoverMoneyTextClass'>Your remaining money was previously " + remainingMoney.toFixed(2) + " dollars before you reset the budget categories back to 0.</p>";
 }
 
 // triggers the resetting of the budget values to 0 (but not the income value) and triggeers the new past tense text when clicking on the reset button
