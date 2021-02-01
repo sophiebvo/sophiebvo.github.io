@@ -58,11 +58,11 @@ function changeDollarColor() {
 
 function insertMoneyComment() {
     if (remainingMoney > 0) {
-        document.getElementById("moneyComment").innerHTML = "<p class='moneyCommentClass'>It looks like you have some left over money! Maybe divert it to a budget you'd like to spend more money from, or add it to your savings budget if you're not sure what you would want to do with it just yet?</p>";
+        document.getElementById("moneyComment").innerHTML = "<p class='moneyCommentClass'>It looks like you have some left over money! Maybe try again and divert it to a budget you'd like to spend more money from, or add it to your savings budget if you're not sure what you would want to do with it just yet?</p>";
     } else if (remainingMoney === 0) {
-        document.getElementById("moneyComment").innerHTML = "<p class='moneyCommentClass'>Ideally, in this calculation, $0 is how much money you'd like to have left after budgeting for everything! However, remember to fill the savings category in case unexpected costs or emergencies occur.</p>";
+        document.getElementById("moneyComment").innerHTML = "<p class='moneyCommentClass'>Ideally, in this calculation, $0 is how much money you'd like to have left after budgeting for everything! This indicates that you know how to reasonably budget within your means. However, remember to always fill the savings category up to a moderate amount in case unexpected costs or emergencies occur.</p>";
     } else if (remainingMoney < 0) {
-        document.getElementById("moneyComment").innerHTML = "<p class='moneyCommentClass'>Whoops! It looks like you're budgeting for more than you're earning. Maybe see which categories you would be willing cut back on?</p>";
+        document.getElementById("moneyComment").innerHTML = "<p class='moneyCommentClass'>Whoops! It looks like you're budgeting for more than you've been earning each month. Maybe try again and see which categories you would be willing cut back on?</p>";
     }
 }
 

@@ -187,9 +187,9 @@ input {
     font-size: 22px;
     height: 34px;
     font-family: 'Kalam', cursive;
-    padding: 15px 30px 60px 30px;
+    padding: 5px 30px 40px 30px;
     font-weight: 600;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .green3 {
@@ -228,7 +228,7 @@ input {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
     color: #202020;
-    padding: 0 60px 30px 60px;
+    padding: 0 60px 0 60px;
     margin: 0;
 }
 
