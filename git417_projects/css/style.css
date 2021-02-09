@@ -232,13 +232,16 @@ fieldset {
     font-size: 22px;
     height: 34px;
     font-family: 'Kalam', cursive;
-    padding: 5px 30px 40px 30px;
+    padding: 5px 30px 0 30px;
     font-weight: 600;
     margin: 0 30px 25px 30px;
 }
 
 .contactSubmitMsgClass {
     padding: 0;
+    padding: 5px 30px 40px 30px;
+    font-weight: 600;
+    margin: 0 30px 25px 30px;
 }
 
 .green3 {
@@ -282,6 +285,7 @@ fieldset {
 }
 
 .contactErrorMsgClass {
+    font-size: 17px;
     color: #990000;
     padding: 0;
     text-align: center;
