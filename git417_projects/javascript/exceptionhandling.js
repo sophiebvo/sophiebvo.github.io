@@ -39,7 +39,7 @@ function checkNameValidity() {
         errorMessageElement1.innerHTML = ""; // clear previous error message
 
         if (fullName === "") {
-            throw "Form failed to submit: please enter your name.";
+            throw "Failed to send: please enter your name.";
         }
     }
 
@@ -54,7 +54,7 @@ function checkNameValidity() {
     finally {
         nameEntered = validity;
         if (!validity) {
-            console.log("Form failed to submit: please enter your name.");
+            console.log("Failed to send: please enter your name.");
         }
     }
 }
@@ -71,7 +71,7 @@ function checkEmailValidity() {
         errorMessageElement2.innerHTML = ""; // clear previous error message
 
         if (!(emailAddress.includes("@"))) {
-            throw "Form failed to submit: please enter a valid email address.";
+            throw "Failed to send: please enter a valid email address.";
         }
     }
 
@@ -86,7 +86,7 @@ function checkEmailValidity() {
     finally {
         emailEntered = validity;
         if (!validity) {
-            console.log("Form failed to submit: please enter a valid email address.");
+            console.log("Failed to send: please enter a valid email address.");
         }
     }
 }
@@ -103,7 +103,7 @@ function checkMessageValidity() {
         errorMessageElement3.innerHTML = ""; // clear previous error message
 
         if (messageSent === "") {
-            throw "Form failed to submit: please enter a message.";
+            throw "Failed to send: please enter a message.";
         }
     }
 
@@ -118,7 +118,7 @@ function checkMessageValidity() {
     finally {
         nameEntered = validity;
         if (!validity) {
-            console.log("Form failed to submit: please enter a message.");
+            console.log("Failed to send: please enter a message.");
         }
     }
 }
