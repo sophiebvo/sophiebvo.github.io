@@ -108,7 +108,7 @@ h3 {
     padding: 0;
 }
 
-#budgetPlanner {
+#budgetPlanner, #contactBackground {
     padding: 10px 0 35px 0;
     background-color: #ffffff;
     width: 800px;
@@ -116,7 +116,13 @@ h3 {
     position: relative;
 }
 
-label {
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#calculationsForm label, #contactForm label {
     display: inline-block;
     margin: 5px 0 5px 50px;
     width: 550px;
@@ -125,6 +131,10 @@ label {
     font-family: 'Kalam', cursive;
     padding: 0;
     font-weight: 600;
+}
+
+#contactForm label {
+    width: 50px;
 }
 
 .smallList {
@@ -139,7 +149,7 @@ label {
     float: right;
 }
 
-input {
+#calculationsForm input, #nameInput, #emailInput {
     float: right;
     height: 34px;
     width: 150px;
@@ -155,6 +165,35 @@ input {
     padding: 15px 0 10px 15px;
 }
 
+#nameInput, #emailInput {
+    float: none;
+    width: 261px;
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    color: #202020;
+    margin: 5px;
+    padding: 20px 0;
+}
+
+#contactForm textarea {
+    float: right;
+    height: 227px;
+    width: 615px;
+    font-size: 16px;
+    text-align: left;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    color: #202020;
+    margin: 5px 50px 5px 0;
+    border: none;
+    background-color: #E8D44D;
+    border-radius: 5px;
+    outline: none;
+    padding: 6px 15px;
+    resize: none;
+}
+
 .lineDivide {
     width: 91%;
     margin: 25px auto;
@@ -162,9 +201,8 @@ input {
     background-color: #202020; 
 }
 
-#remainingMoney, #resetBudgets {
+#remainingMoney, #resetBudgets, #submitContact {
     height: 34px;
-    margin: 0 auto;
     margin: 0 11.2% 0 11.2%;
     font-size: 22px;
     font-family: 'Kalam', cursive;
@@ -176,12 +214,19 @@ input {
     outline: none;
 }
 
-#remainingMoney:hover, #resetBudgets:hover {
+#submitContact {
+    height: 50px;
+    margin: 25px 44.75% 16px 44.75%;
+    padding: 8px 10px;
+    font-size: 26px;
+}
+
+#remainingMoney:hover, #resetBudgets:hover, #submitContact:hover{
     transition: .2s ease-in-out;
     transform: scale(1.1);
 }
 
-.leftoverMoneyTextClass {
+.leftoverMoneyTextClass, .contactSubmitMsgClass {
     text-indent: 0;
     text-align: center;
     font-size: 22px;
@@ -189,7 +234,11 @@ input {
     font-family: 'Kalam', cursive;
     padding: 5px 30px 40px 30px;
     font-weight: 600;
-    margin: 0;
+    margin: 0 30px 25px 30px;
+}
+
+.contactSubmitMsgClass {
+    padding: 0;
 }
 
 .green3 {
@@ -222,7 +271,7 @@ input {
     color: #E60000;
 }
 
-.moneyCommentClass {
+.moneyCommentClass, .contactErrorMsgClass {
     font-size: 16px;
     font-style: italic;
     font-family: 'Noto Sans', sans-serif;
@@ -230,6 +279,12 @@ input {
     color: #202020;
     padding: 0 60px 0 60px;
     margin: 0;
+}
+
+.contactErrorMsgClass {
+    color: #990000;
+    padding: 0;
+    text-align: center;
 }
 
 .centered {

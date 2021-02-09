@@ -5,7 +5,7 @@
         <!--
             GIT417: Exception Handling
             Author: Sophie Ojcius
-            Date: Jan 18 2021
+            Date: Feb 8 2021
         -->
         
         <title>Sophie's JS Projects | Exception Handling</title>
@@ -40,13 +40,58 @@
             <main>
                 <h2>Project 3: Exception Handling</h2>
 
-                <p class="centered">This page is currently empty, but come back later once I've completed the project!</p>
+                <p>For this week's project, I created a contact form and experimented with exception handling to show the user different messages if the input fields are not properly filled out when attempting to submit the form. Although the form does not actually send the submitted data anywhere, it responds in a way that makes it user friendly to understand if the form has or has not been correctly submitted. The entire form disappears after a successful submission to prevent the user from accidentally resubmitting the form, and to put emphasis on a thank you message which implies to the user that the form has been properly submitted.</p>
+
+                <section id="contactBackground">
+                    <h3>Contact Me</h3>
+
+                    <div class="lineDivide"></div>
+
+                    <form id="contactForm">
+                        <fieldset>
+                            <!--User input will be grabbed by document.getElementById() to later determine if an error message is needed-->
+                            <label for="nameInput">
+                                Name
+                            </label>
+                            <input type="text" id="nameInput" name="name" placeholder="First and Last Name">
+
+                            <!--User input will be grabbed by document.getElementById() to later determine if an error message is needed-->
+                            <label for="emailInput">
+                                Email
+                            </label>
+                            <input type="text" id="emailInput" name="email" placeholder="example@domain.com">                    
+                        </fieldset>
+
+                        <fieldset>
+                            <!--User input will be grabbed by document.getElementById() to later determine if an error message is needed-->
+                            <label for="messageInput">
+                                Message
+                            </label>
+                            <textarea id="messageInput" name="message" placeholder="Introduce yourself and write your message here..."></textarea>
+                        </fieldset>
+
+                        <fieldset>
+                            <!--clicking on the button brings up either error messages or a thank you message-->
+                            <input type="submit" id="submitContact" value="SEND">
+                        </fieldset>
+                    </form>
+
+                    <!--the exception handling messages will appear here if errors occur-->
+                    <div id="contactErrorMsg1"></div>
+                    <div id="contactErrorMsg2"></div>
+                    <div id="contactErrorMsg3"></div>
+
+                    <!--the thank you message will appear here after proper form submission-->
+                    <div id="contactSubmitMsg"></div>
+                </section>
             </main>
 
             <footer>
                 &copy; Sophie Ojcius
             </footer>
         </div>
+
+        <script src="../javascript/exceptionhandling.js"></script>
     </body>
 
 </html>

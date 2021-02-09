@@ -5,7 +5,7 @@
         <!--
             GIT417: Home Page
             Author: Sophie Ojcius
-            Date: Feb 2 2021
+            Date: Feb 8 2021
         -->
         
         <title>Sophie's JS Projects</title>
@@ -36,172 +36,53 @@
             <main>
                 <h2>Welcome to my class portfolio!</h2>
 
-                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. You can either view the newest project below, or click on any project that interests you above&#8212;assuming that they've already been created. Next week's project will cover exception handling.</p>
+                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. You can either view the newest project below, or click on any project that interests you above&#8212;assuming that they've already been created. Next week's project will cover web security.</p>
 
-                <h2>Project 2: I<span class="widerSpacing">f/</span>Else Statements</h2>
+                <h2>Project 3: Exception Handling</h2>
 
-                <p>For this week's project, I've updated my simple budget planner from the previous week to provide more intuitive responses after a user calculates their remaining money. Just as before, users input their monthly income and allocate how much money they wish (or need) to spend in each category, and the planner then calculates how much money is left over so that they can change their budget costs as necessary. The planner now also provides suggestions to the user based on how much money is left over, and the amount of money left over changes color depending on how little or how much money is left.</p>
+                <p>For this week's project, I created a contact form and experimented with exception handling to show the user different messages if the input fields are not properly filled out when attempting to submit the form. Although the form does not actually send the submitted data anywhere, it responds in a way that makes it user friendly to understand if the form has or has not been correctly submitted. The entire form disappears after a successful submission to prevent the user from accidentally resubmitting the form, and to put emphasis on a thank you message which implies to the user that the form has been properly submitted.</p>
 
-                <p>If you would like to compare the response changes side by side, last week's project is available in the Calculations page.</p>
-
-                <section id="budgetPlanner">
-                    <h3>Monthly Budget Planner</h3>
+                <section id="contactBackground">
+                    <h3>Contact Me</h3>
 
                     <div class="lineDivide"></div>
 
-                    <form>
-                        <!--User input value below (minimum value of 0) will be grabbed by document.getElementById()-->
-                        <label for="income">
-                            Your Monthly Income 
-                            <span class="smallList">(after taxes...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="income" value="0">
+                    <form id="contactForm">
+                        <fieldset>
+                            <!--User input will be grabbed by document.getElementById() to later determine if an error message is needed-->
+                            <label for="nameInput">
+                                Name
+                            </label>
+                            <input type="text" id="nameInput" name="name" placeholder="First and Last Name">
 
-                        <div class="lineDivide"></div>
+                            <!--User input will be grabbed by document.getElementById() to later determine if an error message is needed-->
+                            <label for="emailInput">
+                                Email
+                            </label>
+                            <input type="text" id="emailInput" name="email" placeholder="example@domain.com">                    
+                        </fieldset>
 
-                        <label for="housingBudget">
-                            Housing 
-                            <span class="smallList">(mortgage, rent, taxes, repairs...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="housingBudget" value="0">
+                        <fieldset>
+                            <!--User input will be grabbed by document.getElementById() to later determine if an error message is needed-->
+                            <label for="messageInput">
+                                Message
+                            </label>
+                            <textarea id="messageInput" name="message" placeholder="Introduce yourself and write your message here..."></textarea>
+                        </fieldset>
 
-                        <label for="utilitiesBudget">
-                            Utilities 
-                            <span class="smallList">(electricity, water, gas, internet, phone...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="utilitiesBudget" value="0">
-
-                        <label for="transportationBudget">
-                            Transportation 
-                            <span class="smallList">(car payments, parking fees, public transportation...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="transportationBudget" value="0">
-
-                        <label for="educationBudget">
-                            Education 
-                            <span class="smallList">(books, supplies...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="educationBudget" value="0">
-
-                        <label for="insuranceBudget">
-                            Insurance 
-                            <span class="smallList">(medical, auto, homeowner's...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="insuranceBudget" value="0">
-
-                        <label for="healthcareBudget">
-                            Healthcare 
-                            <span class="smallList">(primary copays, dental copays, medications...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="healthcareBudget" value="0">
-
-                        <label for="foodBudget">
-                            Food 
-                            <span class="smallList">(groceries, takeout, pet food...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="foodBudget" value="0">
-
-                        <label for="clothingBudget">
-                            Clothing
-                            <span class="smallList">(shirts, shoes, accessories, children's clothing...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="clothingBudget" value="0">
-
-                        <label for="groomingBudget">
-                            Personal Hygiene &#38; Grooming 
-                            <span class="smallList">(haircuts, showering products...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="groomingBudget" value="0">
-
-                        <label for="householdBudget">
-                            Household Necessities 
-                            <span class="smallList">(toilet paper, tools, cleaning supplies...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="householdBudget" value="0">
-
-                        <label for="subscriptionsBudget">
-                            Subscriptions & Memberships 
-                            <span class="smallList">(Netflix, Amazon Prime, gym...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="subscriptionsBudget" value="0">
-
-                        <label for="travelBudget">
-                            Travel & Outings 
-                            <span class="smallList">(vacations, restaurants, bars, movie tickets...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="travelBudget" value="0">
-
-                        <label for="otherEntBudget">
-                            Other Entertainment 
-                            <span class="smallList">(videogames, hobbies...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="otherEntBudget" value="0">
-
-                        <label for="giftsBudget">
-                            Gifts & Donations 
-                            <span class="smallList">(birthdays, holidays, special occaions, charities...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="giftsBudget" value="0">
-
-                        <label for="debtBudget">
-                            Debt 
-                            <span class="smallList">(loan payments, credit card payments...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="debtBudget" value="0">
-
-                        <label for="savingsBudget">
-                            Savings 
-                            <span class="smallList">(emergency fund, big purchases, retirement...)</span>
-                            <span class="inputDollar">$</span>
-                        </label>
-                        <!--User input value below will be grabbed by document.getElementById()-->
-                        <input type="number" min="0" id="savingsBudget" value="0">
-
-                        <div class="lineDivide"></div>
-
-                        <!--clicking on this button triggers calcLeftoverMoney() function-->
-                        <button type="button" id="remainingMoney">Calculate Remaining Money</button>
-
-                        <!--clicking on this button triggers clearBudgetCategories() function-->
-                        <button type="button" id="resetBudgets">Clear Budgets</button>
+                        <fieldset>
+                            <!--clicking on the button brings up either error messages or a thank you message-->
+                            <input type="submit" id="submitContact" value="SEND">
+                        </fieldset>
                     </form>
 
-                    <!--remaining money will be written here using document.getElementById().innerHTML after clicking on a button-->
-                    <span id="leftoverMoneyText" class="leftoverMoneyTextClass"></span>
-                    <!--a comment will be written here using document.getElementById().innerHTML after clicking on the remainingMoney button, decided by the insertMoneyComment() function-->
-                    <span id="moneyComment" class="moneyCommentClass"></span>
+                    <!--the exception handling messages will appear here if errors occur-->
+                    <div id="contactErrorMsg1"></div>
+                    <div id="contactErrorMsg2"></div>
+                    <div id="contactErrorMsg3"></div>
+
+                    <!--the thank you message will appear here after proper form submission-->
+                    <div id="contactSubmitMsg"></div>
                 </section>
             </main>
 
@@ -210,7 +91,7 @@
             </footer>
         </div>
 
-        <script src="javascript/ifelsestatements.js"></script>
+        <script src="javascript/exceptionhandling.js"></script>
     </body>
 
 </html>
