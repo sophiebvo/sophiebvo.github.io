@@ -108,7 +108,7 @@ h3 {
     padding: 0;
 }
 
-#budgetPlanner, #contactBackground {
+#budgetPlanner, #contactBackground, #webSecurityBackground {
     padding: 10px 0 35px 0;
     background-color: #ffffff;
     width: 800px;
@@ -289,6 +289,105 @@ fieldset {
     color: #990000;
     padding: 0;
     text-align: center;
+}
+
+#webSecurityBackground > p {
+    padding: 0 65px;
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    color: #202020;
+    margin-top: 0;
+}
+
+p > a {
+    color: #2fd5ff;
+}
+
+p > a:visited {
+    color: #2fd5ff;
+}
+
+p > a:hover {
+    color: #7ce5ff;
+}
+
+details {
+    width: 91%;
+    margin: 25px auto;
+    border: solid;
+    border-color: #ffffff;
+    border-radius: 12px;
+    background-color: #c5f3ff;
+}
+
+details > summary:hover {
+    transition: .2s ease-in-out;
+    transform: scale(1.02);
+}
+
+details > p {
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    color: #202020;
+    margin: 25px 65px;
+}
+
+summary {
+    text-align: center;
+    background-color: #7ce5ff;
+    padding-top: 10px;
+    height: 40px;
+    font-size: 22px;
+    font-family: 'Kalam', cursive;
+    font-weight: 600;
+    background-color: #7ce5ff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+summary {list-style: none}
+
+summary::-webkit-details-marker {display: none; }
+
+details summary::before { 
+    content:"🡒 ";
+}
+  
+details[open] summary::before { 
+    content:"🡑 ";
+}
+
+.automaticUserInformation {
+    font-family: 'Kalam', cursive;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.codeFont {
+    font-family: 'Courier New', monospace;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+details[open] p {
+    animation: slideDown 0.3s;
+}
+  
+@keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translatey(-30px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translatey(0);
+    }
 }
 
 .centered {
