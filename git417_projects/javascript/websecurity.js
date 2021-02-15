@@ -15,9 +15,6 @@ function populateUserInfo() {
     // prints user's platform name
     document.getElementById("userPlatform").textContent = navigator.platform;
 
-    // prints user's location
-    document.getElementById("userLocation").textContent = navigator.geolocation;
-
     // prints user's screen resolution using height and width values
     document.getElementById("userScreenResolution").textContent = screen.width + " x " + screen.height + " (" + screen.width + " pixels wide by " + screen.height + " pixels tall)";
 
