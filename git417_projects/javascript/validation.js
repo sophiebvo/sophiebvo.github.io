@@ -156,6 +156,8 @@ function validateForm(event) {
 
     if (formValid === true) {
         document.getElementById("contactForm").submit();
+        document.getElementById("contactSubmitErrorMsg").innerHTML = "";
+        document.getElementById("contactSubmitErrorMsg").style.display = "none";
     } else {
         document.getElementById("contactSubmitErrorMsg").innerHTML = "The form was unable to be sent, please correctly fill out the fields before attempting to resubmit.";
         document.getElementById("contactSubmitErrorMsg").className = "contactErrorMsgClass2";
