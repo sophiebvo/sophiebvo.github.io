@@ -6,13 +6,12 @@ html {
 }
 
 body {
-    /*width: 1220px;*/
     width: 1220px;
     margin: 0 auto;
     padding: 30px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-    background-color: #202020;
+    background-color: #2B2B2B;
 }
 
 h1 {
@@ -91,6 +90,23 @@ h2 {
     padding: 0;
 }
 
+h3 {
+    color: #000000;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Kalam', cursive;
+    padding: 0;
+}
+
+h4 {
+    color: #000000;
+    text-indent: 65px;
+    font-size: 20px;
+    font-family: 'Kalam', cursive;
+    padding: 0;
+    margin: 0;
+}
+
 .widerSpacing {
     letter-spacing: 8px;
 }
@@ -100,15 +116,7 @@ p {
     font-size: 18px;
 }
 
-h3 {
-    color: #000000;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Kalam', cursive;
-    padding: 0;
-}
-
-#budgetPlanner, #contactBackground, #webSecurityBackground {
+#budgetPlanner, #contactBackground, #webSecurityBackground, #jsTutorialBackground {
     padding: 10px 0 35px 0;
     background-color: #ffffff;
     width: 800px;
@@ -152,7 +160,7 @@ fieldset {
     font-size: 18px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-    color: #202020;
+    color: #2B2B2B;
     margin-right: 26px;
 }
 
@@ -161,7 +169,7 @@ fieldset {
     font-style: italic;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-    color: #202020;
+    color: #2B2B2B;
 }
 
 .inputDollar {
@@ -190,7 +198,7 @@ fieldset {
     font-size: 16px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-    color: #202020;
+    color: #2B2B2B;
     margin: 5px;
     padding: 20px 0;
 }
@@ -203,7 +211,7 @@ fieldset {
     text-align: left;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-    color: #202020;
+    color: #2B2B2B;
     margin: 5px 50px 5px 0;
     border: none;
     background-color: #E8D44D;
@@ -233,7 +241,7 @@ fieldset {
     width: 91%;
     margin: 25px auto;
     height: 2px;
-    background-color: #202020; 
+    background-color: #2B2B2B; 
 }
 
 #remainingMoney, #resetBudgets, #submitContact, #goBack {
@@ -285,32 +293,26 @@ fieldset {
 }
 
 .green3 {
-    /*color: hsl(120, 100%, 45%);*/
     color: #00E600;
 }
 
 .green2 {
-    /*color: hsl(120, 100%, 35%);*/
     color: #00B300;
 }
 
 .green1 {
-    /*color: hsl(120, 100%, 30%);*/
     color: #009900;
 }
 
 .red1 {
-    /*color: hsl(0, 100%, 30%);*/
     color: #990000;
 }
 
 .red2 {
-    /*color: hsl(0, 100%, 35%);*/
     color: #B30000;
 }
 
 .red3 {
-    /*color: hsl(0, 100%, 45%);*/
     color: #E60000;
 }
 
@@ -319,7 +321,7 @@ fieldset {
     font-style: italic;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-    color: #202020;
+    color: #2B2B2B;
     padding: 0 60px 0 60px;
     margin: 0;
 }
@@ -336,12 +338,12 @@ fieldset {
     padding: 8px 130px 0 130px;
 }
 
-#webSecurityBackground > p {
+#webSecurityBackground > p, #jsTutorialBackground > p {
     padding: 0 65px;
     font-size: 16px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-    color: #202020;
+    color: #2B2B2B;
     margin-top: 0;
 }
 
@@ -376,7 +378,7 @@ details > p {
     font-size: 16px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-    color: #202020;
+    color: #2B2B2B;
     margin: 25px 65px;
 }
 
@@ -435,6 +437,31 @@ details[open] p {
     }
 }
 
+code {
+    margin: 0 65px;
+    border-radius: 10px;
+}
+
+.codeResult {
+    border: 5px solid #2B2B2B;
+    border-radius: 10px;
+    margin: 30px 200px 50px 200px;
+    padding: 10px;
+}
+
+.codeResult > h2, .codeResult > div > h2 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-size: 24px;
+}
+
+.headingClass {
+    background-color: #7ce5ff;
+    padding: 3px 3px 3px 97px;
+    border-radius: 15px;
+    color: #ffffff;
+}
+
 .centered {
     text-align: center;
     text-indent: 0;
@@ -443,5 +470,5 @@ details[open] p {
 footer {
     text-align: center;
     font-style: italic;
-    padding: 10px 0 5px 0;
+    padding: 20px 0 5px 0;
 }

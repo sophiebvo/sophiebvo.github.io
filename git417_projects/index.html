@@ -36,74 +36,17 @@
             <main>
                 <h2>Welcome to my class portfolio!</h2>
 
-                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. You can either view the newest project below, or click on any project that interests you above&#8212;assuming that they've already been created. Next week's project will cover a JavaScript tutorial.</p>
+                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. Click on any project that interests you above&#8212;assuming that they've already been created. The most recent project covers a JavaScript tutorial.</p>
 
-                <h2>Project 5: Validation Code</h2>
+                <h3>The End of the Class</h3>
 
-                <p>For this week's project, I enhanced and validated my exception handling project using custom JavaScript functions. If a user leaves a field blank or enters the wrong formatting, they are provided with helpful error messages that appear and disappear as determined after each click of the "send" button. After successfully submitting the form, the user is taken to another page in the site with the option to return to the form page, with all of the form fields empty if they choose to come back.</p>
-
-                <section id="contactBackground">
-                    <h3>Contact Me</h3>
-
-                    <div class="lineDivide"></div>
-
-                    <!--novalidate is used to remove default browser validation and let us use custom JS validation-->
-                    <form id="contactForm" action="projects/thankyou.html" novalidate="novalidate">
-                        <fieldset class="labelTypeNormal">
-                            <!--User input will be grabbed by document.getElementById() to later determine if an error message/red border color is needed-->
-                            <label for="nameInput">Name</label>
-                            <input type="text" id="nameInput" name="name" placeholder="First and Last Name" required="required">
-
-                            <!--User input will be grabbed by document.getElementById() to later determine if an error message/red border color is needed-->
-                            <label for="emailInput">Email</label>
-                            <input type="email" id="emailInput" name="email" placeholder="example@domain.com" required="required">                    
-                        </fieldset>
-
-                        <!--the error message will appear here if name and/or email errors occur-->
-                        <div id="contactErrorMsg1"></div>
-
-                        <fieldset class="labelTypeNormal">
-                            <!--User input will be grabbed by document.getElementById() to later determine if an error message/red border color is needed-->
-                            <label for="messageInput">Message</label>
-                            <textarea id="messageInput" name="message" placeholder="Introduce yourself and write your message here..." required="required"></textarea>
-                        </fieldset>
-
-                        <!--the error message will appear here if the message input is empty-->
-                        <div id="contactErrorMsg2"></div>
-
-                        <fieldset class="labelTypeRadio">
-                            <!--User input will be grabbed by document.getElementById() for all 3 radio buttons to later determine if an error message/red border color is needed-->
-                            <p>Would you like to collaborate together?</p>
-
-                            <input type="radio" id="yesRadio" name="collaboration" value="yes" required="required">
-                            <label for="yesRadio">Yes</label>
-
-                            <input type="radio" id="noRadio" name="collaboration" value=no>
-                            <label for="yesRadio">No</label>
-
-                            <input type="radio" id="maybeRadio" name="collaboration" value="maybe">
-                            <label for="yesRadio">Maybe</label>
-                        </fieldset>
-
-                        <!--the error message will appear here if a radio button is not selected-->
-                        <div id="contactErrorMsg3"></div>
-
-                        <fieldset>
-                            <!--clicking on the button brings up either error messages, or takes the user to another page on the site if the submission is successful-->
-                            <input type="submit" id="submitContact" value="SEND">
-                        </fieldset>
-
-                        <!--the error message will appear here if any part of the form is invalid-->
-                        <div id="contactSubmitErrorMsg"></div>
-                    </form>
-                </section>
+                <p>I've officially created my last project for this half of the semester, and I'm now extremely excited to see what the next half brings. Let's hope that the next portfolio site contains a lot more complex JavaScript!</p>
             </main>
 
             <footer>
                 &copy; Sophie Ojcius
             </footer>
         </div>
-        <script src="javascript/validation.js"></script>
     </body>
 
 </html>
