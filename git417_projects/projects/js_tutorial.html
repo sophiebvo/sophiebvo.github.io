@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang=en>
+
+    <head>
+        <!--
+            GIT417: JavaScript Tutorial
+            Author: Sophie Ojcius
+            Date: March 1, 2021
+        -->
+        
+        <title>Sophie's JS Projects | JS Tutorial</title>
+        <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <script src="../javascript/modernizr.custom.05819.js"></script>
+
+        <!--These lines of code get the highlight js code library from a cloud content distribution network (CDN)-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <!--for highlighting JS code-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/javascript.min.js"></script>
+        <!--for highlighting HTML code-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/xml.min.js"></script>
+        <!--for highlighting CSS code-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/css.min.js"></script>
+        <!--This line is needed for a CSS style for all of the above-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/a11y-dark.min.css">
+        <!--End of obtaining highlight js code library-->
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html"><h1>Sophie's <span class="jsFont">JavaScript</span> Projects</h1></a>
+                <ul>
+                    <li><a href="calculations.html">Calculations</a></li>
+                    <li><a href="if_else_statements.html">If/Else Statements</a></li>
+                    <li><a href="exception_handling.html">Exception Handling</a></li>
+                    <li><a href="web_security.html">Web Security</a></li>
+                    <li><a href="validation_code.html">Validation Code</a></li>
+                    <li><a href="js_tutorial.html" class="activePage">JS Tutorial</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="wrapper">
+            <aside>
+                <a href="../index.html"><img src="../images/backbutton.png" alt="back button to home"/></a>
+            </aside>
+
+            <main>
+                <h2>Project 6: JavaScript Tutorial</h2>
+                <h3>Changing Content With CSS Through JavaScript</h3>
+
+                <p>Although HTML and CSS alone can be combined to create beautiful and functional websites, JavaScript can help you add more complex features to your content, and add new content altogether. This basic tutorial which I have created will attempt to briefly teach you how to access content displayed in your web page, how to change that content, and how to change CSS through JavaScript to change the way your content is displayed. (Any links below refer to W3Schools and MND Web Docs pages which are provided for additional information.)</p>
+
+                <section id="jsTutorialBackground">
+                    <h3>Accessing an Element</h3>
+
+                    <p>In order to change the way something is displayed on your web page, you first need to be able to access what is being displayed on your web page. JavaScript can interact with the <a href="https://www.w3schools.com/js/js_htmldom.asp" target="domRef">Document Object Model</a> (DOM) of your page to do this, with all of the elements on your web page treated as individual objects. You can access an HTML document's element, content, properties, and attributes using various JavaScript methods, some of which we will go over below. This is how you will be able to then change the way the content is displayed in your web page.</p>
+
+                    <p>You can access elements in the DOM by using the <span class="codeFont">document</span> object and its methods. One of the easiest methods to use is the <span class="codeFont">getElementByID()</span>  method, which is the method we will use for all the interactive coding examples in this tutorial. By giving an HTML tag an <span class="codeFont">id</span> attribute, you can easily target that specific element in your HTML document when writing JavaScript code to interact with it.</p>
+
+                    <p>For example, if you wanted to interact with just one paragraph somewhere in your document, this is how you could go about targeting that paragraph:</p>
+
+                    <h4>HTML Code Snippet:</h4>
+                    <pre>
+                        <code class="html">
+&lt;p id=&quot;normalPar&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                        </code>
+                    </pre>
+
+                    <h4>JS Code Snippet:</h4>
+                    <pre>
+                        <code>
+var myParagraph = document.getElementById("normalPar");
+                        </code>
+                    </pre>
+
+                    <p>Another useful method is the <span class="codeFont">getElementsByClassName()</span> method, which lets you access all elements with a particular class name. For example, if you wanted to target all paragraphs in your document that you had styled with red font, this is how you might go about doing it:</p>
+
+                    <h4>HTML Code Snippet:</h4>
+                    <pre>
+                        <code class="html">
+&lt;p class=&quot;redFont&quot;&gt;Lorem ipsum dolor sit amet...&lt;&#47;p&gt;
+&lt;p class=&quot;redFont&quot;&gt;Viverra vitae congue eu consequat...&lt;&#47;p&gt;
+                        </code>
+                    </pre>
+
+                    <h4>CSS Code Snippet:</h4>
+                    <pre>
+                        <code class="css">
+.redfont {
+    color: red;
+}
+                        </code>
+                    </pre>
+
+                    <h4>JS Code Snippet:</h4>
+                    <pre>
+                        <code class="javascript">
+var redParagraphs = document.getElementsByClassName("redFont");
+                        </code>
+                    </pre>
+
+                    <p>You can also target collections of elements by their tag name (<span class="codeFont">getElementsByTagName()</span>), by their CSS selectors (<span class="codeFont">querySelectorAll()</span>), and (for forms) by their name (<span class="codeFont">getElementsByName()</span>), which can all be read about <a href="https://www.w3schools.com/jsref/dom_obj_document.asp" target="domMethodsRef">here</a>. For these three methods and the <span class="codeFont">getElementsByClassName()</span> method, the list of elements is indexed when you target them, so using array syntax, you can target just one of these elements if you wish. Because index numbers begin with 0 and go up from there, this is how you would alter the JavaScript code in the last example to target just the second paragraph instead of all of all of the paragraphs:</p>
+
+                    <h4>JS Code Snippet:</h4>
+                    <pre>
+                        <code class="javascript">
+var redParagraphs = document.getElementsByClassName("redFont")[1];
+                        </code>
+                    </pre>
+
+                    <p>For this tutorial, you will only need to know how to use the <span class="codeFont">getElementByID()</span> method, but I highly recommend trying to recreate this tutorial with different methods on your own time to better understand the pros and cons of using one or the other.</p>
+
+                    <div class="lineDivide"></div>
+
+                    <h3>Accessing and Changing an Element's Content</h3>
+
+                    <p>In order to change the text of an element in your document, you will need to use the <span class="codeFont">textContent</span> property. Although we can also use the <span class="codeFont">innerHTML</span> or <span class="codeFont">innerText</span> properties for this, because <span class="codeFont">innerHTML</span> is generally unsafe due to its cross-site scripting vulnerabilities, we will avoid that one. <span class="codeFont">innerText</span> could be used, but for the purposes of the interactive examples in this tutorial, <span class="codeFont">textContent</span> has slightly better compatibility with older browsers and does what it needs to. Read more <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent#differences_from_innertext" target="textContentRef">here</a> if you're curious about the way the three properties behave differently.</p>
+
+                    <p>If you want to change the text of a heading in your document after the click of a button, one way to achieve this is by simply accessing the header element using the <span class="codeFont">getElementByID()</span> method, changing its text using the <span class="codeFont">innerText</span> property, accessing the button element by the same <span class="codeFont">getElementByID()</span> method, and adding an event listener so that the function triggers when you click on a button:</p>
+
+                    <h4>HTML Code Snippet:</h4>
+                    <pre>
+                        <code class="html">
+&lt;h2 id=&quot;changingH2&quot;&gt;Clicking on buttons is fun!&lt;/h2&gt;
+&lt;button type=&quot;button&quot; id=&quot;button1&quot;&gt;Click Me&lt;/button&gt;
+                        </code>
+                    </pre>
+
+                    <h4>JS Code Snippet:</h4>
+                    <pre>
+                        <code class="javascript">
+function changeText() {
+    var elementText = document.getElementById("changingH2"); //accesses header
+    elementText.textContent = "Thanks for clicking on the button!"; //changes text
+}
+                            
+var btn1 = document.getElementById("button1"); //accesses button
+btn1.addEventListener("click", changeText, false); //clicking triggers function
+                        </code>
+                    </pre>
+
+                    <!--Interactive Example Part 1, changes header text on button click-->
+                    <h4>Preview:</h4>
+                    <div class="codeResult">
+                        <h2 id="interactiveHeadingP1">Clicking on buttons is fun!</h2>
+                        <button type="button" id="button1">Click Me</button>
+                    </div>
+
+                    <p>We've now managed to change the text, but clicking the button a second time doesn't appear to do anything since there are no conditional statements to make something different happen once the button has been clicked more than once. One way to add a bit more interactivity would be by toggling between messages.</p>
+
+                    <p>If you want to toggle between one text state and the other whenever you click on the button, this can be achieved by slightly changing the JavaScript code to add simple <span class="codeFont">if</span> and <span class="codeFont">else</span> statements and some variables to store strings. Using the same HTML code snippet as above, here is one way that this could be achieved by altering the last JavaScript code snippet:</p>
+
+                    <h4>JS Code Snippet:</h4>
+                    <pre>
+                        <code class="javascript">
+function changeText() {
+    var elementText = document.getElementById("changingH2");
+    var firstState = "Clicking on buttons is fun!"; //1st and original state
+    var secondState = "Click on it again!"; //2nd state
+                    
+    if (elementText.textContent === firstState) { //if text matches 1st state,
+        elementText.textContent = secondState; //change to 2nd state text
+    } else { //else (if text does not match 1st state),
+        elementText.textContent = firstState; //change to 1st state text
+    }
+}
+
+var btn1 = document.getElementById("button1");
+btn1.addEventListener("click", changeText, false);
+                        </code>
+                    </pre>
+
+                    <!--Interactive Example Part 2, toggles back and forth between text on button click-->
+                    <h4>Preview:</h4>
+                    <div class="codeResult">
+                        <h2 id="interactiveHeadingP2">Clicking on buttons is fun!</h2>
+                        <button type="button" id="button2">Click Me</button>
+                    </div>
+                    
+                    <div class="lineDivide"></div>
+
+                    <h3>Assessing and Changing an Element's CSS Properties</h3>
+
+                    <p>Now we have a bit more interactivity by changing the element's content, but the text still looks a bit dull. Luckily, JavaScript can access CSS properties through the DOM. This means that elements existing in the DOM can be changed using JavaScript functions, and that new elements created in JavaScript and added to the DOM tree can have CSS styling applied to them as well. This is extremely useful when you have conditional statements where you want certain actions to occur in certain circumstances.</p>
+
+                    <p>Applying the <span class="codeFont">style</span> property followed by the CSS property's name in dot notation references an element's CSS properties. The property's name will always be written the same unless the CSS property has a hyphen in it, in which case the hyphen will be removed and the following letter will be capitalized.</p>
+
+                    <P>For example, if you want to change the default background color, padding, border radius, text alignment, and font color of the element in the last example when the text is &quot;Click on it again!&quot; but want to have them returned to the way it was displayed before when the text returns to &quot;Clicking on buttons is fun!&quot; then you would use the <span class="codeFont">style</span> property followed by the appropriate CSS property name and set it to the values you wish. To remove a style you just added and return it to the way it looked before, set its value to an empty string. Keeping the HTML code the same, here is one way that you could alter the last JavaScript code snippet to achieve this:</P>
+
+                    <h4>JS Code Snippet:</h4>
+                    <pre>
+                        <code class="javascript">
+function changeText() {
+    var elementText = document.getElementById("changingH2");
+    var firstState = "Clicking on buttons is fun!";
+    var secondState = "Click on it again!";
+                    
+    if (elementText.textContent === firstState) {
+        elementText.textContent = secondState;
+        elementText.style.backgroundColor = "#7ce5ff";  //adds background color
+        elementText.style.padding = "3px"; //adds padding
+        elementText.style.borderRadius = "10px"; //adds border radius
+        elementText.style.textAlign = "center"; //adds text alignment
+        elementText.style.color = "#ffffff"; //adds font color
+    } else {
+        elementText.textContent = firstState;
+        elementText.style.backgroundColor = ""; //removes background color
+        elementText.style.padding = ""; //removes padding
+        elementText.style.borderRadius = ""; //removes border radius
+        elementText.style.textAlign = ""; //removes text alignment
+        elementText.style.color = ""; //removes font color
+    }
+}
+
+var btn1 = document.getElementById("button1");
+btn1.addEventListener("click", changeText, false);
+                        </code>
+                    </pre>
+                    
+                    <!--Interactive Example Part 3, toggles text and CSS styling on button click-->
+                    <h4>Preview:</h4>
+                    <div class="codeResult">
+                        <h2 id="interactiveHeadingP3">Clicking on buttons is fun!</h2>
+                        <button type="button" id="button3">Click Me</button>
+                    </div>
+                    <p>Now we know how to change the appearance of an element, but could we make it entirely disappear by using the same <span class="codeFont">style</span> property? Actually, we can.</p>
+
+                    <p>By accessing CSS properties through the DOM, even the visibility of elements can be controlled so that they either appear or disappear on the web page. This is extremely useful for, say, revealing and hiding menus.</p>
+                    
+                    <p>If you want to be able to toggle visibility of our heading, adding a secondary button, a secondary event listener, and a secondary function (with similar <span class="codeFont">if</span> and <span class="codeFont">else</span> statements as before) to change the CSS <span class="codeFont">display</span> property values will work. Here is the revised code to accommodate the ability to toggle visibility on and off:</p>
+
+                    <h4>HTML Code Snippet:</h4>
+                    <pre>
+                        <code class="html">
+&lt;h2 id=&quot;changingH2&quot;&gt;Clicking on buttons is fun!&lt;/h2&gt;
+&lt;button type=&quot;button&quot; id=&quot;button1&quot;&gt;Toggle Style&lt;/button&gt;
+&lt;button type=&quot;button&quot; id=&quot;button2&quot;&gt;Toggle Visibility&lt;/button&gt;
+                        </code>
+                    </pre>
+
+                    <p>Notice that, to avoid confusion, the button names were changed to clarify what actions they trigger.</p>
+
+                    <h4>JS Code Snippet:</h4>
+                    <pre>
+                        <code class="javascript">
+function changeText() {
+    var elementText = document.getElementById("changingH2");
+    var firstState = "Clicking on buttons is fun!";
+    var secondState = "Click on it again!";
+                    
+    if (elementText.textContent === firstState) {
+        elementText.textContent = secondState;
+        elementText.style.backgroundColor = "#7ce5ff";
+        elementText.style.padding = "3px";
+        elementText.style.borderRadius = "10px";
+        elementText.style.textAlign = "center";
+        elementText.style.color = "#ffffff";
+    } else {
+        elementText.textContent = firstState;
+        elementText.style.backgroundColor = "";
+        elementText.style.padding = "";
+        elementText.style.borderRadius = "";
+        elementText.style.textAlign = "";
+        elementText.style.color = "";
+    }
+}
+
+var btn1 = document.getElementById("button1");
+btn1.addEventListener("click", changeText, false);
+
+/* new function and event handler below */
+
+function changeVis() {
+    var displayVal = document.getElementById("changingH2"); //accesses header
+
+    if (displayVal.style.display === "none") { //if display is none,
+        displayVal.style.display = "block"; //make display block
+    } else { //else (if display is one of the visible values),
+        displayVal.style.display = "none"; //make display none
+    }
+}
+
+var btn2 = document.getElementById("button2"); //accesses visibility button
+btn2.addEventListener("click", changeVis, false); //function triggers on click
+                        </code>
+                    </pre>
+
+                    <!--Interactive Example Part 4, toggles text and CSS styling by clicking on first button, toggles visibility on second button-->
+                    <h4>Preview:</h4>
+                    <div class="codeResult">
+                        <h2 id="interactiveHeadingP4">Clicking on buttons is fun!</h2>
+                        <button type="button" id="button4">Toggle Style</button>
+                        <button type="button" id="button5">Toggle Visibility</button>
+                    </div>
+                    
+                    <div class="lineDivide"></div>
+
+                    <h3>Adding and Removing CSS Classes</h3>
+
+                    <p>Although we've now added and removed styling to the heading as we've wanted to, typing out multiple class properties inside <span class="codeFont">if</span> and <span class="codeFont">else</span> statements seems a bit tedious after a while. This example didn't include that many CSS properties, but it easily could have included a lot more. What if there was a way to reduce the amount of code that needed to be written, and to better separate our CSS styling from our script file?</p>
+
+                    <p>One of the ways that CSS styling through JavaScript can be simplified is by using the <span class="codeFont">className</span> property. By using this property, you can set a CSS class to an element. While you can apply multiple classes to an element in one statement by separating the class names with spaces, in this example we will only create one class which we will add onto and remove from the text element when clicking the &quot;Toggle Style&quot; button. In this revised example, we will use the same HTML code snippet as the last example but move the CSS properties to the style sheet and apply the class name of those properties to the header element in JavaScript:</p>
+
+                    <h4>CSS Code Snippet:</h4>
+                    <pre>
+                        <code class="css">
+.headingClass {
+    background-color: #7ce5ff;
+    padding: 3px 3px 3px 97px;
+    border-radius: 15px;
+    color: #ffffff;
+}
+                        </code>
+                    </pre>
+
+                    <h4>JS Code Snippet:</h4>
+                    <pre>
+                        <code class="javascript">
+function changeText() {
+    var elementText = document.getElementById("changingH2");
+    var firstState = "Clicking on buttons is fun!";
+    var secondState = "Click on it again!";
+                    
+    if (elementText.textContent === firstState) {
+        elementText.textContent = secondState;
+        elementText.className = "headingClass"; //adds entire class
+    } else {
+        elementText.textContent = firstState;
+        elementText.className -= "headingClass"; //removes entire class
+    }
+}
+
+var btn1 = document.getElementById("button1");
+btn1.addEventListener("click", changeText, false);
+
+function changeVis() {
+    var displayVal = document.getElementById("changingH2");
+
+    if (displayVal.style.display === "none") {
+        displayVal.style.display = "block";
+    } else {
+        displayVal.style.display = "none";
+    }
+}
+
+var btn2 = document.getElementById("button2");
+btn2.addEventListener("click", changeVis, false);
+                        </code>
+                    </pre>
+
+                    <!--INTERACTIVE 5-->
+                    <h4>Preview:</h4>
+                    <div class="codeResult">
+                        <h2 id="interactiveHeadingP5">Clicking on buttons is fun!</h2>
+                        <button type="button" id="button6">Toggle Style</button>
+                        <button type="button" id="button7">Toggle Visibility</button>
+                    </div>
+
+                    <p>The results rendered on the web page are exactly the same, but the code is much neater. As you can see, there's definitely more than one way to write a function that results in the same actions. In fact, there are even simpler and shorter ways to recreate this interactive example using JavaScript or jQuery and the <span class="codeFont">toggle()</span> method, but that's beyond the scope of this tutorial.</p>
+
+                    <p>However, taking shortcuts can also make problems appear. In the above code, the <span class="codeFont">text-align</span> property did not properly display centered text, so the text had to be centered by changing the padding to move the text over to the right. Always consider how much troubleshooting you want to do or adjustments you want to make with your code when experimenting with shortening it.</p>
+                </section>
+            
+                <h3>What You Should Learn Next</h3>
+
+                <p>Before moving on to another topic, practice various ways of accessing elements using different JavaScript methods, testing out different ways of changing their content and CSS properties. Depending on the situation, find out if it's easier to change individual properties in JavaScript, or if it's easier to just create a class in your style sheet and then add the class to your element through JavaScript. Once you feel comfortable doing that, begin learning how to create elements in JavaScript, how to add them to the DOM tree, and then practice styling those new elements with what you have learned in this tutorial. Afterwards, follow any other JavaScript tutorial to level up your skills, such as from W3Schools or other useful resources. Good luck!</p>
+            </main>
+            <footer>
+                &copy; Sophie Ojcius
+            </footer>
+        </div>
+        <!--Script to make the interactive coding examples work-->
+        <script src="../javascript/jstutorial.js"></script>
+        <!--Required to make the code light-up with syntax highlighting-->
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

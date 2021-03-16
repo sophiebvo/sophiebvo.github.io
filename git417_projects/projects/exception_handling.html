@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang=en>
+
+    <head>
+        <!--
+            GIT417: Exception Handling
+            Author: Sophie Ojcius
+            Date: Feb 8 2021
+        -->
+        
+        <title>Sophie's JS Projects | Exception Handling</title>
+        <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <script src="../javascript/modernizr.custom.05819.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html"><h1>Sophie's <span class="jsFont">JavaScript</span> Projects</h1></a>
+                <ul>
+                    <li><a href="calculations.html">Calculations</a></li>
+                    <li><a href="if_else_statements.html">If/Else Statements</a></li>
+                    <li><a href="exception_handling.html" class="activePage">Exception Handling</a></li>
+                    <li><a href="web_security.html">Web Security</a></li>
+                    <li><a href="validation_code.html">Validation Code</a></li>
+                    <li><a href="js_tutorial.html">JS Tutorial</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="wrapper">
+            <aside>
+                <a href="../index.html"><img src="../images/backbutton.png" alt="back button to home"/></a>
+            </aside>
+            
+            <main>
+                <h2>Project 3: Exception Handling</h2>
+
+                <p>For this week's project, I created a contact form and experimented with exception handling to show the user different messages if the input fields are not properly filled out when attempting to submit the form. Although the form does not actually send the submitted data anywhere, it responds in a way that makes it user friendly to understand if the form has or has not been correctly submitted. The entire form disappears after a successful submission to prevent the user from accidentally resubmitting the form, and to put emphasis on a thank you message which implies to the user that the form has been properly submitted.</p>
+
+                <section id="contactBackground">
+                    <h3>Contact Me</h3>
+
+                    <div class="lineDivide"></div>
+
+                    <form id="contactForm">
+                        <fieldset class="labelTypeNormal">
+                            <!--User input will be grabbed by document.getElementById() to later determine if an error message is needed-->
+                            <label for="nameInput">
+                                Name
+                            </label>
+                            <input type="text" id="nameInput" name="name" placeholder="First and Last Name">
+
+                            <!--User input will be grabbed by document.getElementById() to later determine if an error message is needed-->
+                            <label for="emailInput">
+                                Email
+                            </label>
+                            <input type="text" id="emailInput" name="email" placeholder="example@domain.com">                    
+                        </fieldset>
+
+                        <fieldset class="labelTypeNormal">
+                            <!--User input will be grabbed by document.getElementById() to later determine if an error message is needed-->
+                            <label for="messageInput">
+                                Message
+                            </label>
+                            <textarea id="messageInput" name="message" placeholder="Introduce yourself and write your message here..."></textarea>
+                        </fieldset>
+
+                        <fieldset>
+                            <!--clicking on the button brings up either error messages or a thank you message-->
+                            <input type="submit" id="submitContact" value="SEND">
+                        </fieldset>
+                    </form>
+
+                    <!--the exception handling messages will appear here if errors occur-->
+                    <div id="contactErrorMsg1"></div>
+                    <div id="contactErrorMsg2"></div>
+                    <div id="contactErrorMsg3"></div>
+
+                    <!--the thank you message will appear here after proper form submission-->
+                    <div id="contactSubmitMsg"></div>
+                </section>
+            </main>
+
+            <footer>
+                &copy; Sophie Ojcius
+            </footer>
+        </div>
+
+        <script src="../javascript/exceptionhandling.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang=en>
+
+    <head>
+        <!--
+            GIT417: Web Security 
+            Author: Sophie Ojcius
+            Date: Feb 15 2021
+        -->
+        
+        <title>Sophie's JS Projects | Web Security</title>
+        <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <script src="../javascript/modernizr.custom.05819.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html"><h1>Sophie's <span class="jsFont">JavaScript</span> Projects</h1></a>
+                <ul>
+                    <li><a href="calculations.html">Calculations</a></li>
+                    <li><a href="if_else_statements.html">If/Else Statements</a></li>
+                    <li><a href="exception_handling.html">Exception Handling</a></li>
+                    <li><a href="web_security.html" class="activePage">Web Security</a></li>
+                    <li><a href="validation_code.html">Validation Code</a></li>
+                    <li><a href="js_tutorial.html">JS Tutorial</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="wrapper">
+            <aside>
+                <a href="../index.html"><img src="../images/backbutton.png" alt="back button to home"/></a>
+            </aside>
+            
+            <main>
+                <h2>Project 4: Web Security</h2>
+
+                <p>For this week's project, I created a page outlining web security from the perspective of a site visitor, a developer or website manager, and a JavaScript student. Users can read the web safety summaries, click on as many links as they wish without spamming their browser with duplicate tabs, and see a little bit of what information JavaScript can access from their computer by opening the widgets.</p>
+
+                <section id="webSecurityBackground">
+                    <h3>Web Safety Basics</h3>
+
+                    <p>Although it's difficult to navigate the web safely and privately, there are a couple of ways that will help you have a private, safer web surfing experience.</p>
+
+                    <!--All URLs open in a new tab (assuming it's a modern browser) and clicking on the links more than once with a tab of the URL already open just redirects the user to that tab instead of creating a duplicate tab-->
+                    <p>For the more secure browsing, security editor Zack Whittaker proposes a combination of <a href="https://techcrunch.com/2018/12/25/cybersecurity-101-guide-browse-web-securely-privately/" target="techCrunchSecurity">using a VPN or creating your own VNP server, using a secure DNS such as Cloudflare, visiting mostly HTTPS-enabled sites, replacing insecure plug-ins for ad- and tracker-blocking extensions, and using Tor through a Tor browser</a>.</p>
+
+                    <p>Webroot, a company that protects businesses and consumers from cyber threats, advises that <a href="https://www.webroot.com/us/en/resources/tips-articles/online-activities-internet-security" target="webrootSecurity">any link can lead you into spyware traps that steal your data without your consent, that sites such as social networking, adult, and torrenting sites are common phishing sites, and that you should always keep your computer, browsers, and software updated with the newest and most secure settings. Unsurprisingly, they also suggest getting an antivirus program like the one which they provide</a>.</p>
+
+                    <p>Editor of TheBestVPN.com, Rob Mardisalu, suggests several tips for safe Internet browsing. Of the tips not mentioned above, new ones include <a href="https://thebestvpn.com/safe-internet-browsing/" target="bestvnpSecurity">downloading the most secure browser you can find, using a password manager with unique passwords instead of saving simple passwords on browser autofill options, learning how to spot and avoid phishing emails, downloading software from and shopping on trustworthy sites, using two-factor authentication, changing passwords after a data breach, using credit monitoring, only hopping on secure wifi networks, and backing up your data</a>.</p>
+
+                    <p>On the other hand, for developers and others who are trying to secure their websites for themselves and site visitors, Lars Lofgren from Quick Sprout provides similar tips. However, some new tips include <a href="https://www.quicksprout.com/website-security/" target="quicksproutSecurity"> using an HTTPS portocol with an SSL certificate, choosing a safe web hosting provider, using tools to monitor your site's security, changing default CMS settings, and restricting file uploads from site visitors</a>.</p>
+
+                    <p>And lastly, the best weapon in your arsenal is your common sense. If something seems risky, trust your intuition and avoid it.</p>
+
+                    <div class="lineDivide"></div>
+
+                    <h3>Finding Public Site Visitor Information</h3>
+
+                    <p>A lot of information, such as a user's operating system and screen resolution, is easily accessible through JavaScript without the need for user input. To view information about your own browser and computer, and to learn how to find that information through code in your own website, view the sections below.</p>
+
+                    <p>(None of the methods used to collect this shared information poses a security risk to the site visitor, nor to their device.)</p>
+
+                    <details>
+                        <summary>Web Browser Name</summary>
+
+                        <!--span tag text is replaced with appropriate text using populateUserInfo()-->
+                        <p>Your current web browser is shown as <span id="userBrowser" class="automaticUserInformation">[Browser]</span> by using the <span class="codeFont">navigator</span> object's <span class="codeFont">appName</span> property.</p>
+
+                        <p>Unless you're using Internet Explorer 10 (or an earlier version) or Opera, your browser will most likely return "Netscape" as the answer, which is why this property alone should no longer be relied upon for finding a user's exact browser.</p>
+                    </details>
+
+                    <details>
+                        <summary>Operating System</summary>
+
+                        <!--span tag text is replaced with appropriate text using populateUserInfo()-->
+                        <p>Your current operating system is shown as <span id="userPlatform" class="automaticUserInformation">[User Platform]</span> by using the <span class="codeFont">navigator</span> object's <span class="codeFont">platform</span> property.</p>
+
+                        <p>Newer browsers such as Firefox and Chrome will return Win32 even on 64-bit operating systems, which is why this method of learning a user's operating system is no longer as reliable as it used to be.</p>
+                    </details>
+
+                    <details>
+                        <summary>Screen Resolution</summary>
+
+                        <!--span tag text is replaced with appropriate text using populateUserInfo()-->
+                        <p>Your current screen resolution is shown as <span id="userScreenResolution" class="automaticUserInformation">[Insert Screen Resolution Here]</span> by using the <span class="codeFont">screen</span> object's <span class="codeFont">height</span> and <span class="codeFont">width</span> properties.</p>
+                    </details>
+
+                    <details>
+                        <summary>Browser Window Size</summary>
+
+                        <!--span tag text is replaced with appropriate text using populateUserInfo()-->
+                        <p>The dimensions of your browser window when the page loaded is shown as approximately <span id="userWindowSize" class="automaticUserInformation">[Browser Window Size]</span> by using the <span class="codeFont">window</span> object's <span class="codeFont">outerHeight</span> and <span class="codeFont">outerWidth</span> properties.</p>
+                    </details>
+
+                    <details>
+                        <summary>Available Size for Content</summary>
+
+                        <!--span tag text is replaced with appropriate text using populateUserInfo()-->
+                        <p>The available size for web content on your screen is shown as <span id="userAvailContentSize" class="automaticUserInformation">[Available Content Size]</span> by using the <span class="codeFont">screen</span> object's <span class="codeFont">availHeight</span> and <span class="codeFont">availWidth</span> properties.</p>
+
+                        <p>If you are using an operating system such as a Mac, you will notice a reasonable difference between the available height as shown here and the full height of your screen resolution! This is because the Dock at the bottom would be subtracted from the full height.</p>
+                    </details>
+
+                    <details>
+                        <summary>Color Depth</summary>
+
+                        <!--span tag text is replaced with appropriate text using populateUserInfo()-->
+                        <p>Your current screen's color depth is shown as <span id="userColorDepth" class="automaticUserInformation">[User Platform]</span> by using the <span class="codeFont">screen</span> object's <span class="codeFont">colorDepth</span> property.</p>
+
+                        <p>Did you know that 24-bit color depth screens are now the standard for phones and computers?</p>
+                    </details>
+                </section>
+            </main>
+
+            <footer>
+                &copy; Sophie Ojcius
+            </footer>
+        </div>
+
+        <script src="../javascript/websecurity.js"></script>
+    </body>
+
+</html>
