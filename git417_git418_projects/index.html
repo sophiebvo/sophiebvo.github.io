@@ -3,7 +3,7 @@
 
     <head>
         <!--
-            GIT417: Home Page
+            GIT418: Home Page
             Author: Sophie Ojcius
             Date: March 15, 2021
         -->
@@ -36,11 +36,11 @@
             <main>
                 <h2>Welcome to my class portfolio!</h2>
 
-                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. Click on any project that interests you above&#8212;assuming that they've already been created&#8212;or scroll down to view the latest project. As this course progresses (and once I've reworked the navigation), I will add more and more projects. The most recent project below shows the basics of object-oriented JavaScript with a custom object that uses a constructor function.</p>
+                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. Click on any project that interests you above&#8212;assuming that they've already been created&#8212;or scroll down to view the latest project. As this course progresses (and once I've reworked the navigation), I will add more and more projects. The most recent project below utilizes the basics of object-oriented JavaScript with a custom object that uses a constructor function.</p>
 
                 <h3>Project 7: Custom Object</h3>
 
-                <p>In this project...</p>
+                <p>In this project, users can make a custom workout plan by creating and adding exercises to a table, adding as many as they wish. Users can choose to count their exercises either in repetitions or in minutes, as well as how many repetitions or how many minutes they wish to spend on the exercise. They cannot add any exercise without completing filling out the form, and if they mess up by adding an exercise they hadn't intended, they can clear the last exercise by clicking on a button under the table.</p>
             </main>
 
             <section id="workoutPlan">
@@ -50,6 +50,7 @@
 
                 <form id="workoutForm">
                     <fieldset class="labelTypeNormal">
+                        <!--user text input stored in var writtenExercise using getElementById()-->
                         <label for="exerciseInput">Type of exercise:</label>
                         <input type="text" id="exerciseInput" name="exerciseInput" placeholder="Exercise Name or Description" required="required">
                     </fieldset>
@@ -57,26 +58,28 @@
                     <fieldset class="labelTypeRadio">
                         <p>Are you counting in repetitions or minutes?</p>
 
+                        <!--user radio check/unchecked status stored in var repRadioOption using getElementById()-->
                         <input type="radio" id="repRadio" name="amount" value="reps" required="required">
                         <label for="repRadio">Repetitions</label>
 
+                        <!--user radio check/unchecked status stored in var minRadioOption using getElementById()-->
                         <input type="radio" id="minRadio" name="amount" value="mins">
                         <label for="minRadio">Minutes</label>
                     </fieldset>
 
                     <fieldset class="labelTypeNormal">
+                        <!--user text input stored in var countAmount using getElementById()-->
                         <label for="exerciseAmount">Amount of repetitions or minutes for this exercise:</label>
                         <input type="number" min="1" max="999" step="1" id="exerciseAmount" name="exerciseAmount" required="required">
                     </fieldset>
 
                     <fieldset>
-                        <!-- Button to submit....... -->
+                        <!-- Button which triggers allowExerciseAdditionAndCleanUp() when clicked, if form is filled out correctly it will create a new exercise based on user input and reset the form fields-->
                         <input type="submit" id="submitExercise" value="Add Exercise">
-
-                        <!--<button type="button" id="submitExercise">Add Exercise</button>-->
                     </fieldset>
                 </form>
 
+                <!--Entire div and everything inside of it only becomes visible after creation of new exercise through displayTable() and becomes invisible again if enough rows are removed through removeLastRow()-->
                 <div id="workoutPlanDisplay">
                     <div class="lineDivide"></div>
 
@@ -89,12 +92,12 @@
                                 Reps & Time:
                             </th>
                         </tr>
-                        <!--<tr><td>Jumping jacks and situps, do them super duper fast and neve let up, never ever!!!</td><td>200 repetition(s)</td></tr>-->
+                        <!--New rows and cells are added here when successfully adding a new exercise through createExercise() and createNewExercise(), or are removed with removeLastRow()-->
                     </table>
 
+                    <!--Button which triggers removeLastRow() which will remove the last row, and if all non-table header rows are removed, will hide the entire #workoutPlanDisplay div-->
                     <button type="button" id="removeExercise">Remove Last Exercise</button>
                 </div>
-
             </section>
 
             <footer>

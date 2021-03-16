@@ -140,7 +140,7 @@ fieldset {
     padding: 0;
     font-weight: 600;
 }
-/* working here */
+
 #workoutForm > .labelTypeNormal:nth-child(1) > label {
     width: 300px;
     margin-right: 0;
@@ -150,8 +150,6 @@ fieldset {
 #workoutForm > .labelTypeNormal:nth-child(2) > label {
     width: 500px;
 }
-
-/* */
 
 #contactForm label {
     width: 50px;
@@ -253,8 +251,6 @@ fieldset {
     background-color: #7ce5ff;
 }
 
-/* working on this!!! */
-
 #exerciseInput {
     width: 400px;
 }
@@ -264,8 +260,6 @@ fieldset {
     float: right;
     margin-right: 40px;
 }
-
-/**/
 
 .lineDivide {
     width: 91%;
@@ -291,7 +285,7 @@ fieldset {
     margin: 0 45.2% 50px 45.2%;
     width: 100px;
 }
-/* */
+
 #submitContact {
     height: 50px;
     margin: 25px 44.75% 16px 44.75%;
@@ -300,13 +294,12 @@ fieldset {
 }
 
 #submitExercise {
-    margin: 25px 41.75% 16px 41.75%;
+    margin: 25px 41% 16px 41%;
 }
 
 #removeExercise {
-    margin: 30px 36% 9px 36%;
+    margin: 30px 35% 9px 35%;
 }
-/* */
 
 #remainingMoney:hover, #resetBudgets:hover, #submitContact:hover, #goBack:hover, #submitExercise:hover, #removeExercise:hover {
     transition: .2s ease-in-out;
@@ -423,7 +416,6 @@ details > p {
 
 summary {
     text-align: center;
-    background-color: #7ce5ff;
     padding-top: 10px;
     height: 40px;
     font-size: 22px;
@@ -501,8 +493,6 @@ code {
     color: #ffffff;
 }
 
-/* WORKING ON THIS SO FAR!!! */
-
 #workoutPlanDisplay {
     display: none;
 }
@@ -512,8 +502,6 @@ code {
     width: 82.5%;
     margin: 30px 70px 0 70px;
     color: #000000;
-    background-color: #CACACA;
-    background-color: #F5AB35;
     background-color: #ABE338;
     border-collapse:collapse;
     border-radius: 10px;
@@ -522,25 +510,23 @@ code {
 #workoutPlanTable th {
     font-size: 25px;
     font-family: 'Kalam', cursive;
-    padding: 10px;
-    background-color: #7ce5ff;
+    padding: 14px;
     background-color: #2B2B2B;
     color: #ffffff;
 }
 
 #workoutPlanTable th:nth-child(1) {
-    width: 73%;
+    width: 72.5%;
 }
 
 #workoutPlanTable th:nth-child(2) {
-    width: 27%;
+    width: 27.5%;
 }
 
 #workoutPlanTable td {
-    padding: 7px 10px 7px 10px;
+    padding: 7px 14px 7px 14px;
     font-size: 18px;
 }
-/* */
 
 .centered {
     text-align: center;
