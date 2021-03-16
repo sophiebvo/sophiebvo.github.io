@@ -116,7 +116,7 @@ p {
     font-size: 18px;
 }
 
-#budgetPlanner, #contactBackground, #webSecurityBackground, #jsTutorialBackground {
+#budgetPlanner, #contactBackground, #webSecurityBackground, #jsTutorialBackground, #workoutPlan {
     padding: 10px 0 35px 0;
     background-color: #ffffff;
     width: 800px;
@@ -130,7 +130,7 @@ fieldset {
     border: none;
 }
 
-#calculationsForm label, .labelTypeNormal label {
+#calculationsForm label, .labelTypeNormal label, #workoutForm > .labelTypeNormal > label{
     display: inline-block;
     margin: 5px 0 5px 50px;
     width: 550px;
@@ -140,6 +140,18 @@ fieldset {
     padding: 0;
     font-weight: 600;
 }
+/* working here */
+#workoutForm > .labelTypeNormal:nth-child(1) > label {
+    width: 300px;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#workoutForm > .labelTypeNormal:nth-child(2) > label {
+    width: 500px;
+}
+
+/* */
 
 #contactForm label {
     width: 50px;
@@ -176,7 +188,7 @@ fieldset {
     float: right;
 }
 
-#calculationsForm input, #nameInput, #emailInput {
+#calculationsForm input, #nameInput, #emailInput, #exerciseInput, #exerciseAmount {
     float: right;
     height: 34px;
     width: 150px;
@@ -192,7 +204,7 @@ fieldset {
     padding: 15px 0 10px 15px;
 }
 
-#nameInput, #emailInput {
+#nameInput, #emailInput, #exerciseInput, #exerciseAmount{
     float: none;
     width: 261px;
     font-size: 16px;
@@ -201,6 +213,10 @@ fieldset {
     color: #2B2B2B;
     margin: 5px;
     padding: 20px 0;
+}
+
+#exerciseInput, #exerciseAmount {
+    font-size: 18px;
 }
 
 #contactForm textarea {
@@ -237,6 +253,20 @@ fieldset {
     background-color: #7ce5ff;
 }
 
+/* working on this!!! */
+
+#exerciseInput {
+    width: 400px;
+}
+
+#exerciseAmount {
+    width: 100px;
+    float: right;
+    margin-right: 40px;
+}
+
+/**/
+
 .lineDivide {
     width: 91%;
     margin: 25px auto;
@@ -244,7 +274,7 @@ fieldset {
     background-color: #2B2B2B; 
 }
 
-#remainingMoney, #resetBudgets, #submitContact, #goBack {
+#remainingMoney, #resetBudgets, #submitContact, #goBack, #submitExercise, #removeExercise {
     height: 34px;
     margin: 0 11.2% 0 11.2%;
     font-size: 22px;
@@ -257,6 +287,11 @@ fieldset {
     outline: none;
 }
 
+#goBack {
+    margin: 0 45.2% 50px 45.2%;
+    width: 100px;
+}
+/* */
 #submitContact {
     height: 50px;
     margin: 25px 44.75% 16px 44.75%;
@@ -264,12 +299,16 @@ fieldset {
     font-size: 26px;
 }
 
-#goBack {
-    margin: 0 45.2% 50px 45.2%;
-    width: 100px;
+#submitExercise {
+    margin: 25px 41.75% 16px 41.75%;
 }
 
-#remainingMoney:hover, #resetBudgets:hover, #submitContact:hover, #goBack:hover {
+#removeExercise {
+    margin: 30px 36% 9px 36%;
+}
+/* */
+
+#remainingMoney:hover, #resetBudgets:hover, #submitContact:hover, #goBack:hover, #submitExercise:hover, #removeExercise:hover {
     transition: .2s ease-in-out;
     transform: scale(1.1);
 }
@@ -461,6 +500,47 @@ code {
     border-radius: 15px;
     color: #ffffff;
 }
+
+/* WORKING ON THIS SO FAR!!! */
+
+#workoutPlanDisplay {
+    display: none;
+}
+
+#workoutPlanTable {
+    text-align: left;
+    width: 82.5%;
+    margin: 30px 70px 0 70px;
+    color: #000000;
+    background-color: #CACACA;
+    background-color: #F5AB35;
+    background-color: #ABE338;
+    border-collapse:collapse;
+    border-radius: 10px;
+}
+
+#workoutPlanTable th {
+    font-size: 25px;
+    font-family: 'Kalam', cursive;
+    padding: 10px;
+    background-color: #7ce5ff;
+    background-color: #2B2B2B;
+    color: #ffffff;
+}
+
+#workoutPlanTable th:nth-child(1) {
+    width: 73%;
+}
+
+#workoutPlanTable th:nth-child(2) {
+    width: 27%;
+}
+
+#workoutPlanTable td {
+    padding: 7px 10px 7px 10px;
+    font-size: 18px;
+}
+/* */
 
 .centered {
     text-align: center;

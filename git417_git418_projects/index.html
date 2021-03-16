@@ -36,17 +36,73 @@
             <main>
                 <h2>Welcome to my class portfolio!</h2>
 
-                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. Click on any project that interests you above&#8212;assuming that they've already been created&#8212;or scroll down to view the latest project. As this course progresses, I will add more and more project pages. The most recent project below covers using object-oriented JavaScript with a custom constructor function.</p>
+                <p>Each week, I will be adding a small project which I'll have completed for my JavaScript class. Click on any project that interests you above&#8212;assuming that they've already been created&#8212;or scroll down to view the latest project. As this course progresses (and once I've reworked the navigation), I will add more and more projects. The most recent project below shows the basics of object-oriented JavaScript with a custom object that uses a constructor function.</p>
 
-                <h3>Project 7: </h3>
+                <h3>Project 7: Custom Object</h3>
 
-                <p>I've officially created my last project for this half of the semester, and I'm now extremely excited to see what the next half brings. Let's hope that the next portfolio site contains a lot more complex JavaScript!</p>
+                <p>In this project...</p>
             </main>
+
+            <section id="workoutPlan">
+                <h3>Workout Plan</h3>
+
+                <div class="lineDivide"></div>
+
+                <form id="workoutForm">
+                    <fieldset class="labelTypeNormal">
+                        <label for="exerciseInput">Type of exercise:</label>
+                        <input type="text" id="exerciseInput" name="exerciseInput" placeholder="Exercise Name or Description" required="required">
+                    </fieldset>
+
+                    <fieldset class="labelTypeRadio">
+                        <p>Are you counting in repetitions or minutes?</p>
+
+                        <input type="radio" id="repRadio" name="amount" value="reps" required="required">
+                        <label for="repRadio">Repetitions</label>
+
+                        <input type="radio" id="minRadio" name="amount" value="mins">
+                        <label for="minRadio">Minutes</label>
+                    </fieldset>
+
+                    <fieldset class="labelTypeNormal">
+                        <label for="exerciseAmount">Amount of repetitions or minutes for this exercise:</label>
+                        <input type="number" min="1" max="999" step="1" id="exerciseAmount" name="exerciseAmount" required="required">
+                    </fieldset>
+
+                    <fieldset>
+                        <!-- Button to submit....... -->
+                        <input type="submit" id="submitExercise" value="Add Exercise">
+
+                        <!--<button type="button" id="submitExercise">Add Exercise</button>-->
+                    </fieldset>
+                </form>
+
+                <div id="workoutPlanDisplay">
+                    <div class="lineDivide"></div>
+
+                    <table id="workoutPlanTable">
+                        <tr>
+                            <th>
+                                Exercise Type:
+                            </th>
+                            <th>
+                                Reps & Time:
+                            </th>
+                        </tr>
+                        <!--<tr><td>Jumping jacks and situps, do them super duper fast and neve let up, never ever!!!</td><td>200 repetition(s)</td></tr>-->
+                    </table>
+
+                    <button type="button" id="removeExercise">Remove Last Exercise</button>
+                </div>
+
+            </section>
 
             <footer>
                 &copy; Sophie Ojcius
             </footer>
         </div>
+
+        <script src="javascript/custom_object.js"></script>
     </body>
 
 </html>
