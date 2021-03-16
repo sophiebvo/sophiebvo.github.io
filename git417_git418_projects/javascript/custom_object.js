@@ -16,7 +16,7 @@ function Exercise(exerciseType, countType, amount) {
 }
 
 
-// creates a new Exercise object and stores references to it in var addExercise
+// creates a new Exercise object and stores references to it in var addExercise, and triggers createNewExercise() function
 
 function createExercise() {
     var writtenExercise = document.getElementById("exerciseInput").value;
